@@ -1,0 +1,71 @@
+ladang-berkah-mandiri-farm/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   ├── logo.png
+│   ├── background.jpg
+│   └── icons/
+│       ├── add.svg
+│       ├── money.svg
+│       └── report.svg
+└── data/
+    └── dummy-data.json (opsional dummy ternak & keuangan)
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ladang Berkah Mandiri Farm</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo Farm" class="logo" />
+    <h1>Ladang Berkah Mandiri Farm</h1>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>📊 Dashboard Statistik</h2>
+      <div id="stats-container"></div>
+    </section>
+
+    <section class="form-input">
+      <h2>➕ Input Data Ternak</h2>
+      <form id="ternak-form">
+        <input type="text" placeholder="Nama Ternak" required />
+        <input type="number" placeholder="Umur (bulan)" required />
+        <select required>
+          <option value="">Jenis</option>
+          <option value="kambing">Kambing</option>
+          <option value="domba">Domba</option>
+        </select>
+        <input type="file" accept="image/*" />
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+
+    <section class="keuangan">
+      <h2>💰 Pencatatan Keuangan</h2>
+      <form id="keuangan-form">
+        <input type="text" placeholder="Keterangan" required />
+        <input type="number" placeholder="Jumlah (Rp)" required />
+        <select required>
+          <option value="masuk">Pemasukan</option>
+          <option value="keluar">Pengeluaran</option>
+        </select>
+        <button type="submit">Catat</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ladang Berkah Mandiri Farm | Made with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
